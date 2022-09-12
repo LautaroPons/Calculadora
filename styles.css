@@ -1,18 +1,29 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Source Code Pro', monospace;
+    --var-color-1: #1D2B1D;
+    --var-color-2: #879E73;
+    --var-color-3: #A9AB96;
+    --var-color-light: #C5DE8A;
+    --var-color-acento: #A95236;
 }
 body{
-    background-color: navy;
+    
+    background-color: var(--var-color-3);
     width: 100vw;
     height: 100vh;
+
 }
 #calculadora{
     height: 80%;
+    max-width: 500px;
 
     border: 2px;
     border-style: solid;
-    border-color: white;
+    border-color: var(--var-color-1);
+    background-color: var(--var-color-2);
+    margin: 5% auto;
 
     display: flex;
     flex-direction: column;
@@ -32,22 +43,23 @@ body{
 #botonera button {
     font-size: 1.5rem;
     font-weight: bold;
-    background-color: transparent;
+    background-color: var(--var-color-1);
     border: 1px;
-    border-color: white;
+    border-color: var(--var-color-3);
     border-style: solid;
-    color: white;
+    color: var(--var-color-3);
 }
 
 #boton-igual{
     grid-row: 5 / 7;
     grid-column: 6;
+    background-color: var(--var-color-acento) !important;
 }
 
 #display {
     height: 40%;
     padding: 1.2rem;
-    background-color: blanchedalmond;
+    background-color: var(--var-color-2);
 }
 
 #display > * {
@@ -57,25 +69,34 @@ body{
 }
 #resultado {
     height: 50%;
-    background-color: navy;
-    color: white;
+    background-color: var(--var-color-3);
+    color: var(--var-color-1);
     padding-right: 2%;
+
+    border-style: none solid solid solid;
+    border-color: var(--var-color-1);
+    border-width: 2px;
 }
 
 input[type="text"] {
-    width: 98%;
+    width: 97%;
     height: 50%;
 
     padding-right: 2%;
 
-    background-color: navy;
-    color: white;
+    background-color: var(--var-color-3);
+    color: var(--var-color-1);
 
     border-radius: 0;
-    border: 0;
+    border-style: solid solid none solid;
+    border-color: #1D2B1D;
+    border-width: 2px;
+}
+#botonera button:hover{
+    border-color: var(--var-color-light);
+    color: var(--var-color-light);
 }
 
 input[type="text"]:focus {
-    border: 0;
     outline: none;
 }
